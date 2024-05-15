@@ -2,10 +2,8 @@
             const widthInput = document.getElementById("floating_width");
             const heightInput = document.getElementById("floating_height");
             const modalBackdrop = document.querySelector(".bg-gray-900");
-            const submittedImageContainer = document.getElementById(
-                "submitted-image-container"
-            );
-            const submittedImage = document.getElementById("draggable-container");
+            const submittedImageContainer = document.getElementById("submitted-image-container");
+            const submittedImage = document.getElementById("submitted-image");
 
             const width = parseFloat(widthInput.value); // Convert input value to number
             const height = parseFloat(heightInput.value); // Convert input value to number
