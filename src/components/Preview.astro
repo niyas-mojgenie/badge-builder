@@ -1,0 +1,44 @@
+---
+import CanvasModal from "./small/CanvasModal.astro";
+
+const {} = Astro.props;
+---
+
+<div class="flex w-screen h-screen items-center justify-center">
+    <div id="add-canvas" class="p-4 sm:ml-64 w-3/6">
+        <button
+            data-modal-target="authentication-modal"
+            data-modal-toggle="authentication-modal"
+            class="w-full p-4 border-2 border-gray-700 border-dashed rounded-lg cursor-pointer"
+        >
+            <div
+                class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-white"
+            >
+                <p class="text-2xl text-gray-400 dark:text-gray-500">
+                    <svg
+                        class="w-3.5 h-3.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 18 18"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 1v16M1 9h16"></path>
+                    </svg>
+                </p>
+            </div>
+        </button>
+    </div>
+    <div
+        id="draggable-container"
+        class="sm:ml-64 mt-[60px] hidden bg-white border-2 border-gray-700 border-dashed shadow-xl"
+    >
+        <div id="delegate-name" class="draggable max-w-max">Delegate Name</div>
+        <div id="reg-no" class="draggable max-w-max">Registartion Number</div>
+    </div>
+</div>
+<CanvasModal />
