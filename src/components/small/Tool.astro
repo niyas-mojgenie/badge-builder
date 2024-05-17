@@ -1,9 +1,12 @@
 ---
-const { text } = Astro.props;
+const { text, id, modalId } = Astro.props;
 ---
 
 <li>
-    <div
+    <button
+        id={id}
+        data-modal-target={modalId}
+        data-modal-toggle={modalId}
         class="bg-white hover:bg-[#00a3ff] group flex flex-col gap-1 items-center justify-start w-24 h-24 text-gray-900 rounded-lg hover:text-white group hover:drop-shadow-lg border cursor-pointer p-3 transition duration-700 ease-in-out"
     >
         <svg
@@ -22,5 +25,5 @@ const { text } = Astro.props;
             class="text-center text-[10px] text-[#00a3ff] group-hover:text-white font-medium"
             >{text}</span
         >
-    </div>
+    </button>
 </li>
