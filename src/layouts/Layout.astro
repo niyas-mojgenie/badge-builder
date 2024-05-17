@@ -37,4 +37,18 @@ const { title } = Astro.props;
             modalBackdrop.style.zIndex = "1000";
         }
     </script>
+    <!-- <script is:inline>
+        document.addEventListener("DOMContentLoaded", function () {
+            const deligateName = document.getElementById("delegate-name");
+            const FormfontWeight = document.getElementById(
+                "floating_font_weight"
+            );
+            const Formfontsize = document.getElementById("floating_font_size");
+            const fontSize = window.getComputedStyle(deligateName).fontSize;
+            const fontWeight = window.getComputedStyle(deligateName).fontWeight;
+            // Set initial font weight and size values in input fields
+            FormfontWeight.value = fontWeight;
+            Formfontsize.value = parseInt(fontSize);
+        });
+    </script> -->
 </html>

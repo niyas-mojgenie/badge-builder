@@ -12,8 +12,10 @@ function updateCanvas(e) {
 
     document.getElementById("add-canvas").classList.add("hidden");
     document.getElementById("draggable-container").classList.remove("hidden");
-    document.getElementById("authentication-modal").classList.toggle("hidden");
-    modalBackdrop.remove();
+
+    const modal = document.getElementById("authentication-modal");
+    modal.classList.toggle("hidden");
+    modalBackdrop.classList.toggle("hidden");
 
     // Display submitted image in a div after form submit
     if (previewImage.src && !previewImage.classList.contains("hidden")) {
