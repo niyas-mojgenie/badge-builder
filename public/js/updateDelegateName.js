@@ -8,11 +8,7 @@ function updateDelegateName(e) {
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
 
     e.preventDefault();
-    document.getElementById("deligateName-modal").classList.toggle("hidden");
-    const modalBackdrop = document.querySelector(".bg-gray-900");
-    modalBackdrop.classList.toggle("hidden");
-
-    console.log(deligateNameToggle.checked);
+    closeModal("deligateName-modal");
 
     if (deligateNameToggle.checked) {
         console.log("checked");

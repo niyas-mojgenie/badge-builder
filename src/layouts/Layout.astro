@@ -26,8 +26,15 @@ const { title } = Astro.props;
             is:inline
             src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
         ></script>
+        <div
+            style="display: none;"
+            modal-backdrop=""
+            class="bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40"
+        >
+        </div>
     </body>
     <script is:inline src="/js/interactDraggable.js"></script>
+    <script src="../../public/js/showAndHideModal.js" is:inline></script>
     <script is:inline>
         const modalBackdrop = document.querySelector(".fb-modal-backdrop");
 

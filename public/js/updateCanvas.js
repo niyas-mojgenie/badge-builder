@@ -1,7 +1,6 @@
 function updateCanvas(e) {
     const widthInput = document.getElementById("floating_width");
     const heightInput = document.getElementById("floating_height");
-    const modalBackdrop = document.querySelector(".bg-gray-900");
     const canvasBg = document.getElementById("canvas-bg");
     const canvas = document.getElementById("draggable-container");
 
@@ -9,13 +8,10 @@ function updateCanvas(e) {
     const height = parseFloat(heightInput.value); // Convert input value to number
 
     e.preventDefault();
+    closeModal("authentication-modal");
 
     document.getElementById("add-canvas").classList.add("hidden");
     document.getElementById("draggable-container").classList.remove("hidden");
-
-    const modal = document.getElementById("authentication-modal");
-    modal.classList.toggle("hidden");
-    modalBackdrop.classList.toggle("hidden");
 
     // Display submitted image in a div after form submit
     if (previewImage.src && !previewImage.classList.contains("hidden")) {
