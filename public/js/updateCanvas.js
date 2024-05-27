@@ -27,8 +27,10 @@ function updateCanvas(e) {
 
     // Set the width and height of the canvas div
     if (!isNaN(width) && !isNaN(height)) {
-        canvas.style.width = `${width}mm`;
-        canvas.style.height = `${height}mm`;
+        canvas.style.minWidth = `${width}mm`;
+        canvas.style.minHeight = `${height}mm`;
+        canvas.style.maxWidth = `${width}mm`;
+        canvas.style.maxHeight = `${height}mm`;
     } else {
         // Handle invalid input (if needed)
         console.error("Invalid width or height entered");
