@@ -45,18 +45,22 @@ import "../../src/scss/custom.scss";
             modalBackdrop.style.zIndex = "1000";
         }
     </script>
-    <!-- <script is:inline>
-        document.addEventListener("DOMContentLoaded", function () {
-            const deligateName = document.getElementById("delegate-name");
-            const FormfontWeight = document.getElementById(
-                "floating_font_weight"
-            );
-            const Formfontsize = document.getElementById("floating_font_size");
-            const fontSize = window.getComputedStyle(deligateName).fontSize;
-            const fontWeight = window.getComputedStyle(deligateName).fontWeight;
-            // Set initial font weight and size values in input fields
-            FormfontWeight.value = fontWeight;
-            Formfontsize.value = parseInt(fontSize);
+    <script is:inline>
+        document.addEventListener("DOMContentLoaded", () => {
+            const canvas = document.getElementById("draggable-container");
+            let scale = 1;
+
+            function zoom(event) {
+                event.preventDefault();
+                const delta = event.deltaY > 0 ? -0.1 : 0.1;
+                scale += delta;
+                scale = Math.min(Math.max(0.125, scale), 4);
+                canvas.style.transform = `scale(${scale})`;
+            }
+
+            document
+                .querySelector(".canvas-container")
+                .addEventListener("wheel", zoom);
         });
-    </script> -->
+    </script>
 </html>
