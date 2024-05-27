@@ -1,0 +1,21 @@
+/* Print styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #draggable-container * {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+span {
+    line-height: 0;
+}
+
+.no-zoom {
+    touch-action: none;
+    user-select: none;
+}

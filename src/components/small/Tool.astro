@@ -20,9 +20,10 @@ const { text, id, modalId, onClick } = Astro.props;
             <slot />
         </svg>
 
-        <span
+        <p
             class="text-center text-[10px] text-[#00a3ff] group-hover:text-white font-medium"
-            >{text}</span
         >
+            {text}
+        </p>
     </button>
 </li>

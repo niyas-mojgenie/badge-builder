@@ -7,14 +7,24 @@ function updateDelegateName(e) {
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
 
+    const colorInput = document.getElementById("favcolor");
+
     e.preventDefault();
     closeModal("deligateName-modal");
+
+    colorInput.addEventListener("input", function (event) {
+        const selectedColor = event.target.value;
+        console.log("Selected color:", selectedColor);
+        colorInput.value = selectedColor;
+        // You can perform any additional actions here if needed
+    });
 
     if (deligateNameToggle.checked) {
         console.log("checked");
         deligateName.style.display = "block";
         deligateName.style.fontSize = Formfontsize.value + "px";
         deligateName.style.fontWeight = FormfontWeight.value;
+        deligateName.style.color = colorInput.value;
     } else {
         deligateName.style.display = "none";
     }
