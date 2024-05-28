@@ -7,6 +7,11 @@ function updateDelegateName(e) {
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
 
+    const fontFamilySelect = document.getElementById(
+        "font-family-delegate-name"
+    );
+    const fontFamily = fontFamilySelect.value;
+
     const colorInput = document.getElementById("favcolor");
 
     e.preventDefault();
@@ -18,6 +23,11 @@ function updateDelegateName(e) {
         colorInput.value = selectedColor;
         // You can perform any additional actions here if needed
     });
+
+    // setting font family
+    if (fontFamily) {
+        deligateName.style.fontFamily = fontFamily;
+    }
 
     if (deligateNameToggle.checked) {
         console.log("checked");
