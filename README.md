@@ -30,7 +30,6 @@ Badge Builder is a user-friendly web application designed to facilitate the crea
 1. **Designing Process:**
     - Start by creating a new badge canvas.
     - Add text elements, adjust properties, and position them on the canvas.
-    - Integrate QR codes by providing relevant data or links.
 
 ## Installation & Commands
 
