@@ -7,7 +7,10 @@ Badge Builder
 -   HTML
 -   CSS
 -   Js
+-   Astro
 -   Tailwind CSS
+-   Sass
+-   Flowbite
 -   Interactjs
 
 ## Overview
