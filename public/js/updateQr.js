@@ -14,6 +14,7 @@ function updateQr(e) {
         qr.style.display = "block";
         // Set the width and height of the canvas div
         if (!isNaN(width) && !isNaN(height)) {
+            0;
             qr.style.width = `${width}px`;
             qr.style.height = `${height}px`;
         } else {

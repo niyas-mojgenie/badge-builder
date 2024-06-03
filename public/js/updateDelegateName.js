@@ -11,8 +11,11 @@ function updateDelegateName(e) {
         "font-family-delegate-name"
     );
     const fontFamily = fontFamilySelect.value;
+    const textAlignSelect = document.getElementById("text-align-deligate");
+    const textAlign = textAlignSelect.value;
 
     const colorInput = document.getElementById("favcolor");
+    const textMaxWidth = document.getElementById("floating_max_width");
 
     e.preventDefault();
     closeModal("deligateName-modal");
@@ -24,17 +27,15 @@ function updateDelegateName(e) {
         // You can perform any additional actions here if needed
     });
 
-    // setting font family
-    if (fontFamily) {
-        deligateName.style.fontFamily = fontFamily;
-    }
-
     if (deligateNameToggle.checked) {
         console.log("checked");
         deligateName.style.display = "block";
         deligateName.style.fontSize = Formfontsize.value + "px";
         deligateName.style.fontWeight = FormfontWeight.value;
         deligateName.style.color = colorInput.value;
+        deligateName.style.maxWidth = `${textMaxWidth.value}px`;
+        deligateName.style.textAlign = textAlign;
+        deligateName.style.fontFamily = fontFamily;
     } else {
         deligateName.style.display = "none";
     }
