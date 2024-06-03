@@ -1,6 +1,7 @@
 ---
 import CanvasModal from "./modals/CanvasModal.astro";
 import DelegateNameModal from "./modals/DelegateNameModal.astro";
+import QrModal from "./modals/QrModal.astro";
 
 const {} = Astro.props;
 ---
@@ -52,8 +53,15 @@ const {} = Astro.props;
             <div id="reg-no" class="draggable max-w-max hidden">
                 Registartion Number
             </div>
+            <img
+                class="draggable hidden"
+                id="qr-image"
+                src="/assets/img/Example-QR-code.webp"
+                alt=""
+            />
         </div>
     </div>
 </div>
 <CanvasModal />
 <DelegateNameModal />
+<QrModal />
