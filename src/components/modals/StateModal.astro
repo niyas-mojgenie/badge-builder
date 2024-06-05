@@ -40,7 +40,7 @@
             <!-- Modal body -->
             <div class="p-4 md:p-5">
                 <form
-                    onsubmit="return updateCategory(event)"
+                    onsubmit="return updateState(event)"
                     class="max-w-md mx-auto m-5"
                 >
                     <div class="grid md:grid-cols-2 md:gap-6 mt-5 items-center">
@@ -49,7 +49,7 @@
                                 class="inline-flex items-center cursor-pointer"
                             >
                                 <input
-                                    id="toggle-category"
+                                    id="toggle-state"
                                     type="checkbox"
                                     value=""
                                     class="sr-only peer"
@@ -70,7 +70,7 @@
                             >
                                 <input
                                     type="color"
-                                    id="favcolor-category"
+                                    id="favcolor-state"
                                     name="favcolor"
                                     value="#000000"
                                     class="form-input"
@@ -87,7 +87,7 @@
                             >Underline select</label
                         >
                         <select
-                            id="font-family-category"
+                            id="font-family-state"
                             class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
                         >
                             <option selected disabled
@@ -116,14 +116,14 @@
                         <div class="relative z-0 w-full mb-5 group">
                             <input
                                 type="text"
-                                name="floating_category_font_weight"
-                                id="floating_category_font_weight"
+                                name="floating_state_font_weight"
+                                id="floating_state_font_weight"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
                             />
                             <label
-                                for="floating_category_font_weight"
+                                for="floating_state_font_weight"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                                 >Font Weight</label
                             >
@@ -131,14 +131,14 @@
                         <div class="relative z-0 w-full mb-5 group">
                             <input
                                 type="text"
-                                name="floating_category_font_size"
-                                id="floating_category_font_size"
+                                name="floating_state_font_size"
+                                id="floating_state_font_size"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
                             />
                             <label
-                                for="floating_category_font_size"
+                                for="floating_state_font_size"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                                 >Font Size</label
                             >
@@ -148,14 +148,14 @@
                         <div class="relative z-0 w-full mb-5 group">
                             <input
                                 type="text"
-                                name="floating_category_max_width"
-                                id="floating_category_max_width"
+                                name="floating_state_max_width"
+                                id="floating_state_max_width"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" "
                                 required
                             />
                             <label
-                                for="floating_category_max_width"
+                                for="floating_state_max_width"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                                 >Max width</label
                             >
@@ -165,7 +165,7 @@
                                 >Underline select</label
                             >
                             <select
-                                id="text-align-category"
+                                id="text-align-state"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
                             >
                                 <option selected disabled>Text Align</option>
@@ -186,4 +186,4 @@
         </div>
     </div>
 </div>
-<script defer is:inline src="../../../public/js/updateCategory.js"></script>
+<script defer is:inline src="../../../public/js/updateState.js"></script>

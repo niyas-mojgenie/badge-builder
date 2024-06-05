@@ -1,24 +1,24 @@
-function updateCategory(e) {
-    const deligateNameToggle = document.getElementById("toggle-category");
-    const deligateName = document.getElementById("category");
+function updateState(e) {
+    const deligateNameToggle = document.getElementById("toggle-state");
+    const deligateName = document.getElementById("state");
     const FormfontWeight = document.getElementById(
-        "floating_category_font_weight"
+        "floating_state_font_weight"
     );
-    const Formfontsize = document.getElementById("floating_category_font_size");
+    const Formfontsize = document.getElementById("floating_state_font_size");
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
 
-    const fontFamilySelect = document.getElementById("font-family-category");
+    const fontFamilySelect = document.getElementById("font-family-state");
     const fontFamily = fontFamilySelect.value;
-    const textAlignSelect = document.getElementById("text-align-category");
+    const textAlignSelect = document.getElementById("text-align-state");
     const textAlign = textAlignSelect.value;
 
-    const colorInput = document.getElementById("favcolor-category");
-    const textMaxWidth = document.getElementById("floating_category_max_width");
+    const colorInput = document.getElementById("favcolor-state");
+    const textMaxWidth = document.getElementById("floating_state_max_width");
 
     e.preventDefault();
-    closeModal("category-modal");
+    closeModal("state-modal");
 
     colorInput.addEventListener("input", function (event) {
         const selectedColor = event.target.value;
