@@ -2,6 +2,9 @@
 import CanvasModal from "./modals/CanvasModal.astro";
 import DelegateNameModal from "./modals/DelegateNameModal.astro";
 import QrModal from "./modals/QrModal.astro";
+import RegistrationModal from "./modals/RegistrationModal.astro";
+import CategoryModal from "./modals/CategoryModal.astro";
+import StateModal from "./modals/StateModal.astro";
 
 const {} = Astro.props;
 ---
@@ -50,9 +53,21 @@ const {} = Astro.props;
             >
                 Delegate Name
             </span>
-            <div id="reg-no" class="draggable max-w-max hidden">
-                Registartion Number
-            </div>
+            <span
+                id="registration-number"
+                class="draggable max-w-max hidden"
+                style="font-weight: 400; font-size: 16px; "
+            >
+                000000
+            </span>
+            <span
+                id="category"
+                class="draggable max-w-max hidden"
+                style="font-weight: 400; font-size: 16px; "
+            >
+                Category
+            </span>
+
             <img
                 class="draggable hidden"
                 id="qr-image"
@@ -65,3 +80,6 @@ const {} = Astro.props;
 <CanvasModal />
 <DelegateNameModal />
 <QrModal />
+<RegistrationModal />
+<CategoryModal />
+<StateModal />
