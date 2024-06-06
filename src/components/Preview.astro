@@ -6,6 +6,8 @@ import RegistrationModal from "./modals/RegistrationModal.astro";
 import CategoryModal from "./modals/CategoryModal.astro";
 import StateModal from "./modals/StateModal.astro";
 import DesignationModal from "./modals/DesignationModal.astro";
+import CompanyModal from "./modals/CompanyModal.astro";
+import DaypassModel from "./modals/DaypassModel.astro";
 
 const {} = Astro.props;
 ---
@@ -82,6 +84,20 @@ const {} = Astro.props;
             >
                 Designation
             </span>
+            <span
+                id="company"
+                class="draggable max-w-max hidden"
+                style="font-weight: 400; font-size: 16px; "
+            >
+                Company
+            </span>
+            <span
+                id="daypass"
+                class="draggable max-w-max hidden"
+                style="font-weight: 400; font-size: 16px; "
+            >
+                Day pass
+            </span>
 
             <img
                 class="draggable hidden"
@@ -99,3 +115,5 @@ const {} = Astro.props;
 <CategoryModal />
 <StateModal />
 <DesignationModal />
+<CompanyModal />
+<DaypassModel />
