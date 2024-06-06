@@ -16,7 +16,7 @@ const {} = Astro.props;
             <Tool
                 onClick="showModal('deligateName-modal')"
                 modalId="deligateName-modal"
-                id="delegate-name-modal"
+                id="delegate-tool"
                 text="Delegate Name"
             >
                 <path
@@ -30,7 +30,7 @@ const {} = Astro.props;
             <Tool
                 onClick="showModal('registration-modal')"
                 modalId="registration-modal"
-                id="registration-number-modal"
+                id="registration-tool"
                 text="Registartion Number"
             >
                 <path
@@ -44,7 +44,7 @@ const {} = Astro.props;
             <Tool
                 onClick="showModal('category-modal')"
                 modalId="category-modal"
-                id="category-number-modal"
+                id="category-tool"
                 text="Category"
             >
                 <path
@@ -58,7 +58,7 @@ const {} = Astro.props;
             <Tool
                 onClick="showModal('qr-modal')"
                 modalId="qr-modal"
-                id=""
+                id="qr-tool"
                 text="QR Code"
             >
                 <path
@@ -76,7 +76,7 @@ const {} = Astro.props;
             <Tool
                 onClick="showModal('state-modal')"
                 modalId="state-modal"
-                id="state-number-modal"
+                id="state-total"
                 text="State"
             >
                 <path
@@ -94,7 +94,12 @@ const {} = Astro.props;
             </Tool>
         </ToolsWrapper>
         <ToolsWrapper title=" Professional Details">
-            <Tool text="Designation">
+            <Tool
+                onClick="showModal('designation-modal')"
+                modalId="designation-modal"
+                id="designation-tool"
+                text="Designation"
+            >
                 <path
                     stroke="currentColor"
                     stroke-linecap="round"

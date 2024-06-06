@@ -5,6 +5,7 @@ import QrModal from "./modals/QrModal.astro";
 import RegistrationModal from "./modals/RegistrationModal.astro";
 import CategoryModal from "./modals/CategoryModal.astro";
 import StateModal from "./modals/StateModal.astro";
+import DesignationModal from "./modals/DesignationModal.astro";
 
 const {} = Astro.props;
 ---
@@ -74,6 +75,13 @@ const {} = Astro.props;
             >
                 State
             </span>
+            <span
+                id="designation"
+                class="draggable max-w-max hidden"
+                style="font-weight: 400; font-size: 16px; "
+            >
+                Designation
+            </span>
 
             <img
                 class="draggable hidden"
@@ -90,3 +98,4 @@ const {} = Astro.props;
 <RegistrationModal />
 <CategoryModal />
 <StateModal />
+<DesignationModal />
