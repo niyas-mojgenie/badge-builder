@@ -4,26 +4,30 @@
         visibility: hidden;
     }
 
+    #draggable-container,
     #draggable-container * {
         visibility: visible;
-        position: absolute;
-        left: 0;
-        top: 0;
+        position: relative;
     }
+
+    #draggable-container-clone,
     #draggable-container-clone * {
         visibility: visible;
-        position: absolute;
-        left: 0;
-        top: 0;
+        position: relative;
     }
+
     .rotate-180 {
         transform: rotate(180deg) !important;
         transform-origin: center;
     }
+
     .vertical-fold {
-        &-clone {
-            transform: rotate(180deg) !important;
-            transform-origin: top;
-        }
+        position: relative;
+        margin-bottom: 0; /* Ensure no extra margin if not needed */
+    }
+
+    .vertical-fold-clone {
+        transform: rotate(180deg) !important;
+        transform-origin: center;
     }
 }
