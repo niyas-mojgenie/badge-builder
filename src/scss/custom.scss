@@ -10,4 +10,20 @@
         left: 0;
         top: 0;
     }
+    #draggable-container-clone * {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .rotate-180 {
+        transform: rotate(180deg) !important;
+        transform-origin: center;
+    }
+    .vertical-fold {
+        &-clone {
+            transform: rotate(180deg) !important;
+            transform-origin: top;
+        }
+    }
 }

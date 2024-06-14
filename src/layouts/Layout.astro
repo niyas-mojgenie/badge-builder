@@ -79,4 +79,50 @@ import "../../src/scss/custom.scss";
             document.addEventListener("keydown", handleKeyDown);
         });
     </script>
+    <script is:inline>
+        document.addEventListener("DOMContentLoaded", function () {
+            const printNormal = document.getElementById("print-normal");
+            const printFlipped = document.getElementById("print-flipped");
+            const printFold = document.getElementById("print-fold");
+            const draggableContainer = document.getElementById(
+                "draggable-container"
+            );
+
+            if (
+                !printNormal ||
+                !printFlipped ||
+                !printFold ||
+                !draggableContainer
+            ) {
+                console.error("One or more elements not found.");
+                return;
+            }
+
+            window.addEventListener("beforeprint", function () {
+                const clone = draggableContainer.cloneNode(true);
+                clone.classList.add("vertical-fold-clone");
+
+                clone.id = "draggable-container-clone";
+
+                if (printFlipped.checked) {
+                    draggableContainer.classList.add("rotate-180");
+                } else if (printFold.checked) {
+                    draggableContainer.classList.add("vertical-fold");
+                    draggableContainer.insertAdjacentElement("afterend", clone);
+                }
+            });
+
+            window.addEventListener("afterprint", function () {
+                draggableContainer.classList.remove("rotate-180");
+                draggableContainer.classList.remove("vertical-fold");
+
+                const clone = document.getElementById(
+                    "draggable-container-clone"
+                );
+                if (clone) {
+                    clone.remove();
+                }
+            });
+        });
+    </script>
 </html>

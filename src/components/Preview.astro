@@ -46,73 +46,75 @@ const {} = Astro.props;
                 </div>
             </button>
         </div>
-        <div
-            id="draggable-container"
-            class="bg-white border-2 border-gray-700 border-dashed shadow-xl bg-no-repeat bg-contain hidden"
-        >
-            <span
-                id="delegate-name"
-                class="draggable-rotatable select-none max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
+        <div class="flex flex-col">
+            <div
+                id="draggable-container"
+                class="draggable-container bg-white border-2 border-gray-700 border-dashed shadow-xl bg-no-repeat bg-contain hidden"
             >
-                Delegate Name
-            </span>
-            <span
-                id="registration-number"
-                class="draggable-rotatable select-none max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                000000
-            </span>
-            <span
-                id="category"
-                class="draggable-rotatable select-none max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                Category
-            </span>
-            <span
-                id="state"
-                class="draggable-rotatable select-none max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                State
-            </span>
-            <span
-                id="designation"
-                class="draggable-rotatable select-none max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                Designation
-            </span>
-            <span
-                id="company"
-                class="draggable-rotatable select-none max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                Company
-            </span>
-            <span
-                id="daypass"
-                class="draggable max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                Day pass
-            </span>
-            <span
-                id="facilities"
-                class="draggable max-w-max hidden"
-                style="font-weight: 400; font-size: 16px; max-width: max-content; "
-            >
-                Facilities
-            </span>
+                <span
+                    id="delegate-name"
+                    class="draggable-rotatable select-none max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    Delegate Name
+                </span>
+                <span
+                    id="registration-number"
+                    class="draggable-rotatable select-none max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    000000
+                </span>
+                <span
+                    id="category"
+                    class="draggable-rotatable select-none max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    Category
+                </span>
+                <span
+                    id="state"
+                    class="draggable-rotatable select-none max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    State
+                </span>
+                <span
+                    id="designation"
+                    class="draggable-rotatable select-none max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    Designation
+                </span>
+                <span
+                    id="company"
+                    class="draggable-rotatable select-none max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    Company
+                </span>
+                <span
+                    id="daypass"
+                    class="draggable-rotatable max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    Day pass
+                </span>
+                <span
+                    id="facilities"
+                    class="draggable-rotatable max-w-max hidden"
+                    style="font-weight: 400; font-size: 16px; max-width: max-content; "
+                >
+                    Facilities
+                </span>
 
-            <img
-                class="draggable hidden"
-                id="qr-image"
-                src="/assets/img/Example-QR-code.webp"
-                alt=""
-            />
+                <img
+                    class="draggable-rotatable hidden"
+                    id="qr-image"
+                    src="/assets/img/Example-QR-code.webp"
+                    alt=""
+                />
+            </div>
         </div>
     </div>
 </div>
