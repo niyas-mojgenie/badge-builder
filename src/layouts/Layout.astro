@@ -20,6 +20,10 @@ import "../../src/scss/custom.scss";
             is:inline
             src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"
         ></script>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <slot />
@@ -33,9 +37,15 @@ import "../../src/scss/custom.scss";
             class="bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40"
         >
         </div>
+        <script
+            is:inline
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+        ></script>
     </body>
+
     <script is:inline src="/js/interactDraggable.js"></script>
     <script src="../../public/js/showAndHideModal.js" is:inline></script>
+    <script is:inline src="../../public/js/counter.js"></script>
     <script is:inline>
         const modalBackdrop = document.querySelector(".fb-modal-backdrop");
 
