@@ -28,7 +28,6 @@ function updateDelegateName(e) {
 
     e.preventDefault();
     closeModal("deligateName-modal");
-    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 
     colorInput.addEventListener("input", function (event) {
         const selectedColor = event.target.value;
@@ -49,4 +48,5 @@ function updateDelegateName(e) {
     } else {
         deligateName.style.display = "none";
     }
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }
