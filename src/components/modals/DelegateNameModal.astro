@@ -180,10 +180,11 @@
                         <label
                             for="quantity-input"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                            >Count:</label
+                            >Number of clones:</label
                         >
                         <div class="relative flex items-center max-w-[8rem]">
                             <button
+                                onclick="updateValue(false,'quantity-input')"
                                 type="button"
                                 id="decrement-button"
                                 data-input-counter-decrement="quantity-input"
@@ -213,10 +214,11 @@
                                 aria-describedby="helper-text-explanation"
                                 class="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="999"
-                                value="1"
+                                value="0"
                                 required
                             />
                             <button
+                                onclick="updateValue(true, 'quantity-input')"
                                 type="button"
                                 id="increment-button"
                                 data-input-counter-increment="quantity-input"

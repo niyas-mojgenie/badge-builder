@@ -17,8 +17,18 @@ function updateDelegateName(e) {
     const colorInput = document.getElementById("favcolor");
     const textMaxWidth = document.getElementById("floating_max_width");
 
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button");
+    const incrementButton = document.getElementById("increment-button");
+    const quantityInputId = document.getElementById("quantity-input");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("delegate-name");
+
     e.preventDefault();
     closeModal("deligateName-modal");
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 
     colorInput.addEventListener("input", function (event) {
         const selectedColor = event.target.value;
