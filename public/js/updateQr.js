@@ -24,4 +24,15 @@ function updateQr(e) {
     } else {
         qr.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button-qr");
+    const incrementButton = document.getElementById("increment-button-qr");
+    const quantityInputId = document.getElementById("quantity-input-qr");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("qr-image");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

@@ -17,15 +17,6 @@ function updateDelegateName(e) {
     const colorInput = document.getElementById("favcolor");
     const textMaxWidth = document.getElementById("floating_max_width");
 
-    // counter
-
-    const decrementButton = document.getElementById("decrement-button");
-    const incrementButton = document.getElementById("increment-button");
-    const quantityInputId = document.getElementById("quantity-input");
-
-    const cloneContainerId = document.getElementById("draggable-container");
-    const elementToCloneId = document.getElementById("delegate-name");
-
     e.preventDefault();
     closeModal("deligateName-modal");
 
@@ -48,5 +39,15 @@ function updateDelegateName(e) {
     } else {
         deligateName.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button");
+    const incrementButton = document.getElementById("increment-button");
+    const quantityInputId = document.getElementById("quantity-input");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("delegate-name");
+
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

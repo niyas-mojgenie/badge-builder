@@ -39,4 +39,15 @@ function updateCategory(e) {
     } else {
         deligateName.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button-cat");
+    const incrementButton = document.getElementById("increment-button-cat");
+    const quantityInputId = document.getElementById("quantity-input-cat");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("category");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

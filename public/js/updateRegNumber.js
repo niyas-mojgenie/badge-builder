@@ -41,4 +41,14 @@ function updateRegNumber(e) {
     } else {
         deligateName.style.display = "none";
     }
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button-reg-no");
+    const incrementButton = document.getElementById("increment-button-reg-no");
+    const quantityInputId = document.getElementById("quantity-input-reg-no");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("registration-number");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }
