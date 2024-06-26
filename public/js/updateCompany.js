@@ -39,4 +39,15 @@ function updateCompany(e) {
     } else {
         deligateName.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button-company");
+    const incrementButton = document.getElementById("increment-button-company");
+    const quantityInputId = document.getElementById("quantity-input-company");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("company");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

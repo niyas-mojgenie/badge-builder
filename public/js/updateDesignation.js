@@ -43,4 +43,21 @@ function updateDesignation(e) {
     } else {
         deligateName.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById(
+        "decrement-button-designation"
+    );
+    const incrementButton = document.getElementById(
+        "increment-button-designation"
+    );
+    const quantityInputId = document.getElementById(
+        "quantity-input-designation"
+    );
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("designation");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

@@ -39,4 +39,18 @@ function updateDaypass(e) {
     } else {
         deligateName.style.display = "none";
     }
+    // counter
+
+    const decrementButton = document.getElementById(
+        "decrement-button-day-pass"
+    );
+    const incrementButton = document.getElementById(
+        "increment-button-day-pass"
+    );
+    const quantityInputId = document.getElementById("quantity-input-day-pass");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("daypass");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

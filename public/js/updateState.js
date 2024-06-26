@@ -39,4 +39,15 @@ function updateState(e) {
     } else {
         deligateName.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById("decrement-button-state");
+    const incrementButton = document.getElementById("increment-button-state");
+    const quantityInputId = document.getElementById("quantity-input-state");
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("state");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }

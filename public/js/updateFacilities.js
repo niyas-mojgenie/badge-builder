@@ -43,4 +43,21 @@ function updateFacilities(e) {
     } else {
         deligateName.style.display = "none";
     }
+
+    // counter
+
+    const decrementButton = document.getElementById(
+        "decrement-button-facilities"
+    );
+    const incrementButton = document.getElementById(
+        "increment-button-facilities"
+    );
+    const quantityInputId = document.getElementById(
+        "quantity-input-facilities"
+    );
+
+    const cloneContainerId = document.getElementById("draggable-container");
+    const elementToCloneId = document.getElementById("facilities");
+
+    cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
 }
