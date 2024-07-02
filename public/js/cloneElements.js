@@ -10,7 +10,6 @@ const cloneElements = (quantityInput, cloneContainer, elementToClone) => {
 
     // Get the value and parse it to an integer
     const value = parseInt(quantityInput.value, 10);
-    console.log(value);
 
     // Create and append the specified number of clones
     for (let i = 0; i < value; i++) {

@@ -3,6 +3,8 @@ function updateDelegateName(e) {
     const deligateName = document.getElementById("delegate-name");
     const FormfontWeight = document.getElementById("floating_font_weight");
     const Formfontsize = document.getElementById("floating_font_size");
+    const rotate = document.getElementById("floating_rotate");
+    const rotateValue = rotate.value;
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
@@ -50,4 +52,5 @@ function updateDelegateName(e) {
     const elementToCloneId = document.getElementById("delegate-name");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

@@ -1,20 +1,16 @@
-interact(".draggable-rotatable")
-    .draggable({
-        inertia: true,
-        modifiers: [
-            interact.modifiers.restrictRect({
-                restriction: "parent",
-                endOnly: true,
-            }),
-        ],
-        autoScroll: true,
-        listeners: {
-            move: dragMoveListener,
-        },
-    })
-    .on("dblclick", function (event) {
-        rotateElement(event.target, 90); // Rotate by 45 degrees on double-click
-    });
+interact(".draggable-rotatable").draggable({
+    inertia: true,
+    modifiers: [
+        interact.modifiers.restrictRect({
+            restriction: "parent",
+            endOnly: true,
+        }),
+    ],
+    autoScroll: true,
+    listeners: {
+        move: dragMoveListener,
+    },
+});
 
 function dragMoveListener(event) {
     var target = event.target;
@@ -24,14 +20,8 @@ function dragMoveListener(event) {
 }
 
 function rotateElement(target, rotation) {
-    var currentRotation = parseFloat(target.getAttribute("data-rotation")) || 0;
-    var newRotation = currentRotation + rotation;
-
-    // Ensure rotation loops back to 0 after 360 degrees
-    newRotation = newRotation % 360;
-    if (newRotation < 0) {
-        newRotation += 360;
-    }
+    // var currentRotation = parseFloat(target.getAttribute("data-rotation")) || 0;
+    var newRotation = rotation;
 
     target.style.transform = `translate(${target.getAttribute(
         "data-x"
