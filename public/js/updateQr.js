@@ -10,7 +10,6 @@ function updateQr(e) {
     closeModal("qr-modal");
 
     if (qrToggle.checked) {
-        console.log("checked");
         qr.style.display = "block";
         // Set the width and height of the canvas div
         if (!isNaN(width) && !isNaN(height)) {

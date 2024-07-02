@@ -22,13 +22,12 @@ function updateDaypass(e) {
 
     colorInput.addEventListener("input", function (event) {
         const selectedColor = event.target.value;
-        console.log("Selected color:", selectedColor);
+
         colorInput.value = selectedColor;
         // You can perform any additional actions here if needed
     });
 
     if (deligateNameToggle.checked) {
-        console.log("checked");
         deligateName.style.display = "block";
         deligateName.style.fontSize = Formfontsize.value + "px";
         deligateName.style.fontWeight = FormfontWeight.value;
