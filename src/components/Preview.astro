@@ -49,67 +49,67 @@ const {} = Astro.props;
         <div class="flex flex-col">
             <div
                 id="draggable-container"
-                class="draggable-container bg-white border-2 border-gray-700 border-dashed shadow-xl bg-no-repeat bg-contain hidden"
+                class="draggable-container relative bg-white border-2 border-gray-700 border-dashed shadow-xl bg-no-repeat bg-contain hidden"
             >
                 <span
                     id="delegate-name"
-                    class="delegate-name draggable-rotatable select-none max-w-max hidden"
+                    class="delegate-name draggable-rotatable select-none max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     Delegate Name
                 </span>
                 <span
                     id="registration-number"
-                    class="registration-number draggable-rotatable select-none max-w-max hidden"
+                    class="registration-number draggable-rotatable select-none max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     000000
                 </span>
                 <span
                     id="category"
-                    class="category draggable-rotatable select-none max-w-max hidden"
+                    class="category draggable-rotatable select-none max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     Category
                 </span>
                 <span
                     id="state"
-                    class="state draggable-rotatable select-none max-w-max hidden"
+                    class="state draggable-rotatable select-none max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     State
                 </span>
                 <span
                     id="designation"
-                    class="designation draggable-rotatable select-none max-w-max hidden"
+                    class="designation draggable-rotatable select-none max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     Designation
                 </span>
                 <span
                     id="company"
-                    class="company draggable-rotatable select-none max-w-max hidden"
+                    class="company draggable-rotatable select-none max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     Company
                 </span>
                 <span
                     id="daypass"
-                    class="daypass draggable-rotatable max-w-max hidden"
+                    class="daypass draggable-rotatable max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     Day pass
                 </span>
                 <span
                     id="facilities"
-                    class="facilities draggable-rotatable max-w-max hidden"
+                    class="facilities draggable-rotatable max-w-max hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style="font-weight: 400; font-size: 16px; max-width: max-content; "
                 >
                     Facilities
                 </span>
 
                 <img
-                    class="qr-image draggable-rotatable hidden"
+                    class="qr-image draggable-rotatable hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     id="qr-image"
                     src="/assets/img/Example-QR-code.webp"
                     alt=""
