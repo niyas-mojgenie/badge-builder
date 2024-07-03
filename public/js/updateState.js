@@ -8,6 +8,8 @@ function updateState(e) {
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
+    const rotate = document.getElementById("floating_rotate_state");
+    const rotateValue = rotate.value;
 
     const fontFamilySelect = document.getElementById("font-family-state");
     const fontFamily = fontFamilySelect.value;
@@ -49,4 +51,5 @@ function updateState(e) {
     const elementToCloneId = document.getElementById("state");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

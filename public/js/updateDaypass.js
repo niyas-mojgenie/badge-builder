@@ -8,6 +8,8 @@ function updateDaypass(e) {
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
+    const rotate = document.getElementById("floating_rotate_daypass");
+    const rotateValue = rotate.value;
 
     const fontFamilySelect = document.getElementById("font-family-daypass");
     const fontFamily = fontFamilySelect.value;
@@ -52,4 +54,5 @@ function updateDaypass(e) {
     const elementToCloneId = document.getElementById("daypass");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

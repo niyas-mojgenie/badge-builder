@@ -10,6 +10,8 @@ function updateDesignation(e) {
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
+    const rotate = document.getElementById("floating_rotate_designation");
+    const rotateValue = rotate.value;
 
     const fontFamilySelect = document.getElementById("font-family-designation");
     const fontFamily = fontFamilySelect.value;
@@ -59,4 +61,5 @@ function updateDesignation(e) {
     const elementToCloneId = document.getElementById("designation");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

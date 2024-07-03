@@ -5,6 +5,8 @@ function updateCategory(e) {
         "floating_category_font_weight"
     );
     const Formfontsize = document.getElementById("floating_category_font_size");
+    const rotate = document.getElementById("floating_rotate_category");
+    const rotateValue = rotate.value;
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
@@ -48,4 +50,5 @@ function updateCategory(e) {
     const elementToCloneId = document.getElementById("category");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

@@ -10,6 +10,8 @@ function updateFacilities(e) {
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
+    const rotate = document.getElementById("floating_rotate_facilities");
+    const rotateValue = rotate.value;
 
     const fontFamilySelect = document.getElementById("font-family-facilities");
     const fontFamily = fontFamilySelect.value;
@@ -59,4 +61,5 @@ function updateFacilities(e) {
     const elementToCloneId = document.getElementById("facilities");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

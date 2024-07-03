@@ -8,6 +8,8 @@ function updateCompany(e) {
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
+    const rotate = document.getElementById("floating_rotate_company");
+    const rotateValue = rotate.value;
 
     const fontFamilySelect = document.getElementById("font-family-company");
     const fontFamily = fontFamilySelect.value;
@@ -48,4 +50,5 @@ function updateCompany(e) {
     const elementToCloneId = document.getElementById("company");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }

@@ -7,6 +7,8 @@ function updateRegNumber(e) {
         "floating_reg_no_font_weight"
     );
     const Formfontsize = document.getElementById("floating_reg_no_font_size");
+    const rotate = document.getElementById("floating_rotate-reg");
+    const rotateValue = rotate.value;
 
     const fontSize = window.getComputedStyle(deligateName).fontSize;
     const fontWeight = window.getComputedStyle(deligateName).fontWeight;
@@ -50,4 +52,5 @@ function updateRegNumber(e) {
     const elementToCloneId = document.getElementById("registration-number");
 
     cloneElements(quantityInputId, cloneContainerId, elementToCloneId);
+    rotateElement(deligateName, rotateValue);
 }
