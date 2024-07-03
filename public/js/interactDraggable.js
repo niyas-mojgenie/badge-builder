@@ -19,7 +19,6 @@ function dragMoveListener(event) {
     moveElement(target, x, y);
 }
 
-
 function rotateElement(target, rotation) {
     // var currentRotation = parseFloat(target.getAttribute("data-rotation")) || 0;
     var newRotation = rotation;
