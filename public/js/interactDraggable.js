@@ -1,16 +1,20 @@
-interact(".draggable-rotatable").draggable({
-    inertia: true,
-    modifiers: [
-        interact.modifiers.restrictRect({
-            restriction: "parent",
-            endOnly: true,
-        }),
-    ],
-    autoScroll: true,
-    listeners: {
-        move: dragMoveListener,
-    },
-});
+interact(".draggable-rotatable")
+    .draggable({
+        inertia: true,
+        modifiers: [
+            interact.modifiers.restrictRect({
+                restriction: "parent",
+                endOnly: true,
+            }),
+        ],
+        autoScroll: true,
+        listeners: {
+            move: dragMoveListener,
+        },
+    })
+    .gesturable({
+        onmove: rotateMoveListener,
+    });
 
 function dragMoveListener(event) {
     var target = event.target;
@@ -19,20 +23,24 @@ function dragMoveListener(event) {
     moveElement(target, x, y);
 }
 
-function rotateElement(target, rotation) {
-    // var currentRotation = parseFloat(target.getAttribute("data-rotation")) || 0;
-    var newRotation = rotation;
+function rotateMoveListener(event) {
+    var target = event.target;
+    var currentRotation = parseFloat(target.getAttribute("data-rotation")) || 0;
+    var newRotation = currentRotation + event.da;
+    rotateElement(target, newRotation);
+}
 
-    target.style.transform = `translate(${target.getAttribute(
-        "data-x"
-    )}px, ${target.getAttribute("data-y")}px) rotate(${newRotation}deg)`;
-    target.setAttribute("data-rotation", newRotation);
+function rotateElement(target, rotation) {
+    var x = target.getAttribute("data-x") || 0;
+    var y = target.getAttribute("data-y") || 0;
+
+    target.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
+    target.setAttribute("data-rotation", rotation);
 }
 
 function moveElement(target, x, y) {
-    target.style.transform = `translate(${x}px, ${y}px) rotate(${
-        target.getAttribute("data-rotation") || 0
-    }deg)`;
+    var rotation = target.getAttribute("data-rotation") || 0;
+    target.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
     target.setAttribute("data-x", x);
     target.setAttribute("data-y", y);
 }
