@@ -21,6 +21,8 @@ Badge Builder is a user-friendly web application designed to facilitate the crea
 
 -   **Customization Options:** Users can personalize their badges by adding text and adjusting font size, color, weight, and family.
 -   **Drag-and-Drop Functionality:** Intuitive drag-and-drop feature for positioning elements on the badge canvas.
+    **Rotate Element in Any degree:** An intuitive feature for rotating elements to any degree on the badge canvas.
+    **Clone Elements :** A feature for cloning elements on the badge canvas.
 -   **Real-Time Editing:** Changes made to the badge design are instantly reflected.
 -   **QR Code Integration:** Seamlessly integrate QR codes into badges for easy access to additional information.
 -   **Print-Friendly Design:** Optimized for printing to ensure quality and layout retention.
