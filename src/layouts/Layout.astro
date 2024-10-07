@@ -66,6 +66,10 @@ import "../../src/scss/custom.scss";
                 event.preventDefault();
                 scale += delta;
                 scale = Math.min(Math.max(0.125, scale), 4);
+                applyScale();
+            }
+
+            function applyScale() {
                 canvas.style.transform = `scale(${scale})`;
             }
 
@@ -87,8 +91,18 @@ import "../../src/scss/custom.scss";
                 }
             }
 
+            function handleBeforePrint() {
+                canvas.style.transform = "scale(1)";
+            }
+
+            function handleAfterPrint() {
+                applyScale();
+            }
+
             canvas.addEventListener("wheel", handleWheel);
             document.addEventListener("keydown", handleKeyDown);
+            window.addEventListener("beforeprint", handleBeforePrint);
+            window.addEventListener("afterprint", handleAfterPrint);
         });
     </script>
     <script is:inline>
