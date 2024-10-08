@@ -30,6 +30,9 @@
         transform: rotate(180deg) !important;
         transform-origin: center;
     }
+    .draggable-rotatable {
+        position: absolute !important; /* Absolute positioning ensures independence from other elements */
+    }
 }
 
 input:-webkit-autofill,
@@ -45,4 +48,8 @@ select:-webkit-autofill:focus {
     box-shadow: 0 0 0px 1000px white inset !important;
     -webkit-text-fill-color: #000 !important;
     transition: background-color 5000s ease-in-out 0s !important;
+}
+.draggable-rotatable {
+    position: absolute; /* Absolute positioning ensures independence from other elements */
+    cursor: move;
 }
